@@ -2,31 +2,33 @@
 
 ## Linear Regression to Predict MPG
 ![Multiple_Linear_Regression.png](https://github.com/mschimmy/MechaCar_Statistical_Analysis/blob/main/images/Multiple_Linear_Regression.png)
-Multiple Linear Regression Model
+<sub>Multiple Linear Regression Model</sub>
 
 ![MLR_p-value_r-squared_value.png](https://github.com/mschimmy/MechaCar_Statistical_Analysis/blob/main/images/MLR_p-value_r-squared_value.png)
-Summary of Multiple Linear Regression Model
+<sub>Summary of Multiple Linear Regression Model</sub>
+
 
 The following equation is the linear regression model for the MechaCars_mpg dataset:
 ```
 mpg = 6.267(vehicle_length) + 0.062(vehicle_weight) + 0.931(spoiler_angle) + 3.546(ground_clearance) + -3.411(AWD)
 ```
 
+
 Which variables/coefficients provided a non-random amount of variancse to the mpg values in the dataset?
 - In the summary output of the multiple linear regression model, each Pr(>|t|) value represents the probability that each coefficient contributes a random amount of variance to the linear model. According to the model, vehicle length and ground clearance (as well as the intercept) are statistically unlikely to provide random amounts of variance to the linear model, and have a significant impact on miles per gallon (mpg).
 
 Is the slope of the linear model considered to be zero? Why or why not?
 - The slope of the linear model is not considered to be zero because the p-value of the multiple linear regression model is 5.35e-11. Therefore, there is sufficient evidence to reject the null hypothesis.
-Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
 
+Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
 - The model sufficiently predicts the dependent variable, miles per gallon (mpg) of MechaCar prototypes. This is because the r-sqaured value is 0.7149, which indicates a strong positive correlation between the variables. This means that approximately 71% of the variability of the dependent variable (miles per gallon) is explained using this linear model.
 
 
 ## Summary Statistics on Suspension Coils
 ![Total_summary](https://github.com/mschimmy/MechaCar_Statistical_Analysis/blob/main/images/Total_summary.png)
-Total summary statistics
+<sub>Total summary statistics</sub>
 ![Lot_summary](https://github.com/mschimmy/MechaCar_Statistical_Analysis/blob/main/images/Lot_summary.png)
-Summary statistics per manufacturing lot
+<sub>Summary statistics per manufacturing lot</sub>
 
 The design specifications for the MechaCar suspension coils dictate that the variabnce of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?
 - At first look, the  variance of all suspension coils manufactored by MechaCar, regarless of lot,  do not exceed the 100 pounds per square inch design specification. But upon further investigation, when the suspension coils are grouped by their manufactoring lots, it is clear that suspension coils from manufacturing lot three do not meet this design specification as the variance of this group is 170.286 pounds.
@@ -35,23 +37,27 @@ The design specifications for the MechaCar suspension coils dictate that the var
 ## T-Test on Suspension Coils
 The one-sample t-test is used to determinfe whether there is a statistical difference between the means of a sample dataset and a hypothesized population dataset. For the purpose of this analysis, 1,500 wis the mean for the hypothesized population dataset, and the significance level is p=0.05 . If the p-value of the sample dataset is lower than the significance level (p<0.05), there would be sufficient evidence to reject the null hypothesis and state that the two means are statistically different.
 
+### Total T-Test
 ![Total_t-test](https://github.com/mschimmy/MechaCar_Statistical_Analysis/blob/main/images/Total_t-test.png)
-Total T-test
+<sub>Total T-test</sub>
 
 According to the t-test that compares the mean of the pounds per square inch (PSI) across all manufacturing lots, there is insufficient evidence to reject the null hypothesis. The p-value for all manufacturing lots is 0.06, which is more than the significance level of 0.05. The two means are not statistically different.
 
+### Lot 1 T-Test
 ![Lot1_t-test](https://github.com/mschimmy/MechaCar_Statistical_Analysis/blob/main/images/Lot1_t-test.png)
-Lot 1 T-test
+<sub>Lot 1 T-test</sub>
 
 The t-test p-value for coils in manufacturing lot 1 is 1, which is much more than the significance level of 0.05. Again, there is insufficient evidence to reject the null hypothesis, and the two means are not statistically different.
 
+### Lot 2 T-Test
 ![Lot2_t-test](https://github.com/mschimmy/MechaCar_Statistical_Analysis/blob/main/images/Lot2_t-test.png)
-Lot 2 T-test
+<sub>Lot 2 T-test</sub>
 
 The t-test p-value for suspension coils in manufacturing lot 2 is 0.61, which indicates that there is not sufficient evidence to reject the null hypothesis and the two means are not statistically different.
 
+### Lot 3 T-Test
 ![Lot3_t-test](https://github.com/mschimmy/MechaCar_Statistical_Analysis/blob/main/images/Lot3_t-test.png)
-Lot 3 T-test
+<sub>Lot 3 T-test</sub>
 
 The last t-test for suspension coils in manufacturing lot 3 gives a p-value of 0.04. There is sufficient evidence to reject the null hypothesis and state that the two means are statistically different.
 
